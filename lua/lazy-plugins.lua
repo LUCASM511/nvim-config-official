@@ -37,6 +37,7 @@ require('lazy').setup({
   require 'kickstart.plugins.telescope',
   require 'kickstart.plugins.todo-comments',
   require 'kickstart.plugins.treesitter',
+  require 'kickstart.plugins.wakatime',
   require 'kickstart.plugins.which-key',
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
