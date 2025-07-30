@@ -1,5 +1,5 @@
 return {
-	{
+  {
     -- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
     -- used for completion, annotations and signatures of Neovim apis
     'folke/lazydev.nvim',
@@ -207,7 +207,7 @@ return {
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        -- clangd = {},
+        clangd = {},
         -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
@@ -270,6 +270,14 @@ return {
               cmd = { 'jdtls' }, -- assuming jdtls is in PATH
               root_dir = require('lspconfig.util').root_pattern('.git', 'pom.xml', 'build.gradle'),
             }
+            -- local lspconfig = require('lspconfig')
+            -- require('lspconfig').clangd.setup {
+            --   on_attach = on_attach,
+            --   cmd = { 'clangd' },
+            --   filetypes = { 'c', 'cpp', 'objc', 'objcpp' },
+            --   root_dir = require('lspconfig').util.root_pattern('compile_commands.json', 'git'),
+            --   capabilities = require('blink_cmp_lsp').default_capabilities(),
+            -- }
           end,
           -- Default handler for all other servers- Default handler for all other servers
           function(server_name)
